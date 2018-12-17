@@ -15,6 +15,15 @@ dotfiles config --local status.showUntrackedFiles no
 3. Reload the shell setting.
 4. Prevent untracked files from showing up when we call dotfiles status.
 
+Use the aliased command from the home directory to manage files, and use git remote repo if you want to manage the files online.
+
+```bash
+dotfiles status
+dotfiles add .vimrc
+dotfiles commit -m "Add vimrc"
+dotfiles remote add origin https://www.github.com/username/repo.git
+dotfiles push origin master
+```
 
 ## Commands
 
