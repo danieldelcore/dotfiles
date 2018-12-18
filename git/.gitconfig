@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Daniel Del Core
+	email = daniel.delcore.92@gmail.com
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.dotfiles/git/.gitignore
+[commit]
+	template = ~/.dotfiles/git/templates/commit
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[rebase]
+    autosquash=true

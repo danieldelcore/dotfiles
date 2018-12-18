@@ -1,0 +1,27 @@
+GIT: Current Branch Name ## git rev-parse --abbrev-ref HEAD
+GIT: Modified Files ## git -c color.status=always status -s | fzf --preview 'git -c color.ui=always diff {+2}'  | awk '{print $2}'
+GIT: Next Modified File ## git status -s | awk '!/^[A-Z] /{print $2}' | head -1
+GIT: Commit Hash ## git log --oneline --color=always -200 | fzf --preview 'git -c color.ui=always show {+1}' | awk '{print $1}'
+GIT: Release Branch Name ## printf "`git rev-parse --abbrev-ref HEAD`-release"
+GIT: NON Release Branch Name ## printf "`git rev-parse --abbrev-ref HEAD | sed 's/-release//'`"
+GIT: Rebase Interactive ## git log --oneline --color=always -200 | fzf | awk '{printf "git rebase -i %s^", $1}'
+GIT: Push Hash ## git log --oneline --color=always -200 | fzf | awk '{printf "git push --force --no-verify origin %s:refs/heads/%s", $1, gensub(/.* ([A-Z]+-[0-9]+).*/, "\\1", "g", $0)}'
+GIT: Fixup Commit ## git log --oneline --color=always -200 | fzf --preview 'git -c color.ui=always status -sb' | awk '{printf "git commit --fixup=%s", $1}'
+GIT: Recommit remote branch ## printf 'git commit --amend --no-edit && git push --force'
+GIT: Clean merged branches ## printf 'g branch --merged | grep -v master | xargs -pr git branch -d'
+GIT: Pull all repos in current folder ## printf 'find . -maxdepth 2 -name .git -type d | xargs -n1 -P 10 -I%% git --git-dir=%% --work-tree=%%/.. pull'
+GIT: Set upstream to current branch ## printf 'git rev-parse --abbrev-ref HEAD | xargs -L1 -I{} git branch --set-upstream-to="origin/{}"'
+GITHUB: Open Repo ## cat ~/.repos | fzf -m | gxargs -i{} open 'https://github.com/{}'
+GITHUB: Update repo list ## printf 'repos > ~/.repos'
+PYTHON: Source Python Virtual Environment ## printf 'source virtualenv/bin/activate'
+NODE: List Global Packages ## printf 'npm list -g --depth=0 2>/dev/null'
+NODE: List Local Packages ## printf 'npm list --depth=0 2>/dev/null'
+MISC: Optimized rsync for backup ## printf 'rsync --all --almost-all --dereference-command-line -Xxv --numeric-ids --progress -e "ssh -T -c arcfour -o Compression=no -x" '
+MISC: Remove .DS_Store files ## printf 'find -name .DS_Store -type f | parallel --bar -i rm \"{}\"'
+MISC: Path ## _z 2>&1 | sort -r -h | awk '{print $2}' | fzf
+MISC: Copy ## if [[ -z "$LBUFFER" ]]; then command-palette && printf "$LBUFFER" | pbcopy; else printf "$LBUFFER" | pbcopy; fi
+MISC: Install Cask App ## brew cask search | fzf | gxargs -rp brew cask install
+MISC: Uninstall Cask App ## brew cask list | fzf | gxargs -rp brew cask uninstall
+MISC: Install Brew App ## brew search | fzf | gxargs -rp brew install
+MISC: Uninstall Brew App ## brew leaves | fzf | gxargs -rp brew uninstall
+MISC: Open Apps ## find /Applications -maxdepth 3 -type d -name "*.app" | fzf --with-nth=-1 --delimiter=/ --nth=-1 | xargs -i open -a '{}'

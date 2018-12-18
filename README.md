@@ -1,72 +1,39 @@
-# dotfiles ಠ_ಠ 
+# dotfiles ಠ_ಠ
 
-## Setup
-The following four lines will set up the bare repository. [Source](https://harfangk.github.io/2016/09/18/manage-dotfiles-with-a-git-bare-repository.html)
+## Installation 📦
+Clone this repo to a hidden `/.dotfile` directory in your home directory:
 
-```bash
-git init --bare $HOME/.dotfiles.git
-echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"' >> $HOME/.zshrc
-source ~/.zshrc
-dotfiles config --local status.showUntrackedFiles no
-```
+`cd ~ && git clone git@github.com:danieldelcore/dotfiles.git ~/.dotfile`
 
-1. Create a git bare repository at ~/.dotfiles.git to track files.
-2. Add alias setting to shell configuration file. This is for zsh so it’s `.zshrc`. For bash, it’d be `.bashrc`. Note how the paths for git directory and working tree are set.
-3. Reload the shell setting.
-4. Prevent untracked files from showing up when we call dotfiles status.
+Install brew:
 
-Use the aliased command from the home directory to manage files, and use git remote repo if you want to manage the files online.
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-```bash
-dotfiles status
-dotfiles add .vimrc
-dotfiles commit -m "Add vimrc"
-dotfiles remote add origin https://www.github.com/username/repo.git
-dotfiles push origin master
-```
+Run setup scripts:
 
-That finishes the setup. Use the aliased command from the home directory to manage files, and use git remote repo if you want to manage the files online.
+- Run all installation scripts: `source ~/.dotfiles/install-scripts/install-all.sh`
 
-```bash
-dotfiles status
-dotfiles add .vimrc
-dotfiles commit -m "Add vimrc"
-dotfiles remote add origin https://www.github.com/danieldelcore/dotfiles.git
-dotfiles push origin master
-```
+_-or-_
 
-## Installing dotfiles onto another system
-It just needs two shell commands before fetching the remote repo.
+- directories:  `source ~/.dotfiles/install-scripts/directories.sh`
+- brew:  `source ~/.dotfiles/install-scripts/brew.sh`
+- node:  `source ~/.dotfiles/install-scripts/node.sh`
+- zsh:  `source ~/.dotfiles/install-scripts/oh-my-zsh.sh`
+- osx:  `source ~/.dotfiles/install-scripts/osx.sh`
+- symlinks:  `source ~/.dotfiles/install-scripts/symlinks.sh`
+
+## ZSH Themes 🍱
+This repo installs three themes by default. Theme configuration is available in `.zshrc`.
+
+To use the base theme 'ddc-prompt': `ZSH_THEME="ddc-prompt"`
+
+To use the [Spaceship](https://github.com/denysdovhan/spaceship-prompt): `ZSH_THEME="spaceship"`
+
+To use [Pure prompt](https://github.com/sindresorhus/pure):
 
 ```bash
-echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"' >> $HOME/.zshrc
-source ~/.zshrc
-echo ".dotfiles.git" >> .gitignore
-git clone --bare https://www.github.com/danieldelcore/dotfiles.git $HOME/.dotfiles.git
-dotfiles checkout
-dotfiles config --local status.showUntrackedFiles no
+autoload -U promptinit; promptinit
+prompt pure
+
+ZSH_THEME="" #to disable oh-my-zsh themes.
 ```
-
-1. Create alias to ensure that the git bare repository works without problem
-2. Reload the shell setting to use that alias
-3. Add .dotfiles.git directory to .gitignore to prevent recursion issues
-4. Clone the repo
-5. Check if it works
-6. If you already have configuration files with identical names, checkout will fail. Back up and remove those files. Skip back up if you don’t need them
-7. Prevent untracked files from showing up on dotfiles status.
-
-## Commands
-
-## Folders
-
-## Aliases
-
-## Vim
-
-### Resources
-- [Vim Awesome](https://vimawesome.com/)
-
-## Git
-
-## ZSH
-

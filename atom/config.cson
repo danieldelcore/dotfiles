@@ -1,0 +1,134 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "9c0d04bd-214b-426c-9316-3b972c9029bc"
+  "atom-ide-ui":
+    use: {}
+  core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "linter-npm-missing"
+      "linter-xo"
+      "linter"
+      "atom-easy-jsdoc"
+      "git-projects"
+      "linter-rubocop"
+      "xatom-debug-chrome"
+      "hyperclick"
+      "xatom-debug-nodejs"
+      "language-javascript"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "dist"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "gloom"
+    ]
+    titleBar: "custom"
+  docblockr:
+    align_tags: "no"
+    extend_double_slash: false
+  editor:
+    fontSize: 12
+    preferredLineLength: 100
+    scrollPastEnd: true
+    showInvisibles: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "e7421c78-5628-83ee-a555-8cb2dbea6d2c"
+  "git-projects":
+    rootPath: "/Users/daniel.delcore/Development"
+  hyperclick: {}
+  "language-babel":
+    allowLocalOverride: true
+    disableWhenNoBabelrcFileInPath: false
+  linter: {}
+  "linter-eslint": {}
+  "linter-sass-lint":
+    configFile: "/Users/daniel.delcore/Development/ng-build/tasks/sass/.sass-lint.yml"
+  "linter-ui-default":
+    panelHeight: 615
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        black: "#686868"
+        blue: "#6972ff"
+        cyan: "#60fdff"
+        green: "#5ffa67"
+        magenta: "#ff77ff"
+        red: "#ff6e67"
+        yellow: "#fffc67"
+    style: {}
+  pomodoro:
+    playBell: false
+    playTicks: false
+  "prettier-atom":
+    prettierOptions:
+      printWidth: 100
+      singleQuote: true
+      trailingComma: "all"
+    printWidth: 100
+    tabWidth: 4
+    useEslint: true
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
+  "tree-view":
+    alwaysOpenExisting: true
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
+".angular.html.text":
+  editor:
+    tabLength: 4
+".ansi.text":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
+".hack.html.text":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
+".hackfragment.source":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
+".hg-commit.text":
+  editor:
+    preferredLineLength: 100
+    tabLength: 4
+".hover.reason.source.type":
+  editor:
+    preferredLineLength: 110
+    tabLength: 4
+".js.jsx.source":
+  editor:
+    showIndentGuide: true
+".reason.source":
+  editor:
+    preferredLineLength: 110
+    tabLength: 4

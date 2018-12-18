@@ -1,0 +1,38 @@
+{
+    "atomKeymap.promptV3Features": true,
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "all",
+    "explorer.openEditors.visible": 0,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "go.inferGopath": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "search.location": "panel",
+    "trailing-spaces.trimOnSave": true,
+    "tslint.autoFixOnSave": true,
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "typescriptHero.codeOutline.enabled": false,
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Gloom",
+    "workbench.editor.enablePreview": true,
+    "workbench.iconTheme": "vs-seti",
+    "workbench.panel.defaultLocation": "right",
+    "workbench.startupEditor": "none",
+    "workbench.editor.showTabs": true,
+    "editor.rulers": [
+        80
+    ],
+    "projectManager.git.baseFolders": [
+        "$home/development",
+        "$home/spike",
+        "$home/lab"
+    ],
+    "explorer.autoReveal": false,
+    "typescript.preferences.quoteStyle": "single",
+    "prettier.tabWidth": 4,
+    "sasslint.configFile": "node_modules/bcapp-pattern-lab/.scss-lint.yml"
+}
