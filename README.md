@@ -3,7 +3,7 @@
 ## Installation 📦
 Clone this repo to a hidden `/.dotfile` directory in your home directory:
 
-`cd ~ && git clone git@github.com:danieldelcore/dotfiles.git ~/.dotfile`
+`cd ~ && git clone git@github.com:danieldelcore/dotfiles.git ~/.dotfiles`
 
 Install brew:
 
