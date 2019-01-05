@@ -41,7 +41,7 @@ export FZF_DEFAULT_OPTS="--extended --reverse --multi --cycle\
   --bind=ctrl-n:toggle-down\
   --color=fg:8,fg+:-1,bg:-1,bg+:-1,hl:7,hl+:3,prompt:2,marker:2,pointer:2,info:9"
 
-local __command_palette() { # {{{
+__command_palette () {
   local cmd=`cat ${COMMANDS_FILE:-~/.dotfiles/command-palette/commands.txt} | awk -F " ## " '! /(^\s*$|^#)/{print "\x1b[32;1m" $1 "\x1b[37m ## " $2 "\x1b[m"}' | fzf -e -s | awk -F " ## " '{print $2}'`
   if [[ -n "$cmd" ]]; then
     local output=`eval "$cmd"`
