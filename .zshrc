@@ -2,7 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/daniel.delcore/.oh-my-zsh
+USERNAME=$(id -un);
+
+export ZSH="/Users/$USERNAME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -66,7 +68,7 @@ alias gitalias="cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep '^alias'"
 alias dev="cd ~/Development"
 alias lab="cd ~/Lab"
 
-alias todo="open /Users/daniel.delcore/Dropbox/1_docs/0_TODO.md"
+alias todo="open /Users/${USERNAME}/Dropbox/1_docs/0_TODO.md"
 alias typora="open -a Typora"
 alias go-hyper="cd ~/.hyper_plugins/local/"
 alias github="git ls-remote --get-url | sed 's/:/\//' | sed 's/git@/https:\/\//' | xargs open"
@@ -98,7 +100,7 @@ function github() {
   fi
 }
 
-export NVM_DIR="/Users/daniel.delcore/.nvm"
+export NVM_DIR="/Users/${USERNAME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Calls nvm use automatically in a directory with a .nvmrc file
