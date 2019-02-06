@@ -34,5 +34,9 @@
     "explorer.autoReveal": false,
     "typescript.preferences.quoteStyle": "single",
     "prettier.tabWidth": 4,
-    "sasslint.configFile": "node_modules/bcapp-pattern-lab/.scss-lint.yml"
+    "sasslint.configFile": "node_modules/bcapp-pattern-lab/.scss-lint.yml",
+    "javascript.validate.enable": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.snippetSuggestions": "top",
+    "flow.useNPMPackagedFlow": true
 }
