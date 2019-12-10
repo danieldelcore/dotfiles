@@ -33,8 +33,7 @@
     ],
     "explorer.autoReveal": false,
     "typescript.preferences.quoteStyle": "single",
-    "prettier.tabWidth": 4,
-    "sasslint.configFile": "node_modules/bcapp-pattern-lab/.scss-lint.yml",
+    "typescript.validate.enable": true,
     "javascript.validate.enable": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "editor.snippetSuggestions": "top",
@@ -55,13 +54,13 @@
                 "name": "Jest All",
                 "program": "${workspaceFolder}/node_modules/.bin/jest",
                 "args": [
-                    "--runInBand",
+                    "--runInBand"
                 ],
                 "console": "integratedTerminal",
                 "internalConsoleOptions": "neverOpen",
                 "disableOptimisticBPs": true,
                 "windows": {
-                    "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+                    "program": "${workspaceFolder}/node_modules/jest/bin/jest"
                 }
             },
             {
@@ -78,10 +77,37 @@
                 "internalConsoleOptions": "neverOpen",
                 "disableOptimisticBPs": true,
                 "windows": {
-                    "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+                    "program": "${workspaceFolder}/node_modules/jest/bin/jest"
                 }
             }
         ],
         "compounds": []
-    }
+    },
+    "eslint.validate": [
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "typescriptreact",
+            "autoFix": true
+        }
+    ],
+    "scm.diffDecorations": "gutter",
+    "terminal.external.osxExec": "terminal.app",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "breadcrumbs.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.blame.ignoreWhitespace": true,
+    "cSpell.allowCompoundWords": true,
+    "cSpell.userWords": [
+        "unmount",
+        "unmounting",
+        "jira",
+        "confluence",
+        "atlassian"
+    ],
+    "editor.folding": false,
+    "editor.tabSize": 2
 }
