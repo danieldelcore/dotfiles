@@ -83,5 +83,18 @@
     {
         "key": "alt+cmd+\\",
         "command": "-workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "cmd+j",
+        "command": "-workbench.action.togglePanel"
     }
 ]
