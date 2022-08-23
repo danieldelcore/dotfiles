@@ -13,8 +13,6 @@ brew install mcrypt
 brew install mongodb
 brew install mysql
 brew install nvm
-brew install openssh
-brew install openssl
 brew install rename
 brew install tig
 brew install tree
@@ -29,11 +27,9 @@ brew cask install google-chrome
 brew cask install google-chrome-canary
 
 # Terminals
-brew cask install hyper
 brew cask install iterm2
 
 # Editors
-brew cask install atom
 brew cask install visual-studio-code
 
 # Applications
@@ -43,10 +39,12 @@ brew cask install imagealpha
 brew cask install imageoptim
 brew cask install insomnia
 brew cask install kap
-brew cask install sketch
+brew cask install figma
 brew cask install slack
-brew cask install typora
 brew cask install vlc
+brew cask install notion
+brew cask install spotify
+
 
 # Cleanup
 brew cleanup
