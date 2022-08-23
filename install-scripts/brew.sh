@@ -22,28 +22,28 @@ brew install yarn
 echo "Brew Cask"
 
 # Browsers
-brew cask install firefox
-brew cask install google-chrome
-brew cask install google-chrome-canary
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask google-chrome-canary
 
 # Terminals
-brew cask install iterm2
+brew install --cask iterm2
 
 # Editors
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
 
 # Applications
-brew cask install 1password
-brew cask install dropbox
-brew cask install imagealpha
-brew cask install imageoptim
-brew cask install insomnia
-brew cask install kap
-brew cask install figma
-brew cask install slack
-brew cask install vlc
-brew cask install notion
-brew cask install spotify
+brew install --cask 1password
+brew install --cask dropbox
+brew install --cask imagealpha
+brew install --cask imageoptim
+brew install --cask insomnia
+brew install --cask kap
+brew install --cask figma
+brew install --cask slack
+brew install --cask vlc
+brew install --cask notion
+brew install --cask spotify
 
 
 # Cleanup
