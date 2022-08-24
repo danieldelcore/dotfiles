@@ -1,113 +1,153 @@
 {
-    "atomKeymap.promptV3Features": true,
-    "editor.formatOnPaste": true,
-    "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.renderWhitespace": "all",
-    "explorer.openEditors.visible": 0,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "go.inferGopath": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "search.location": "panel",
-    "trailing-spaces.trimOnSave": true,
-    "tslint.autoFixOnSave": true,
-    "typescript.updateImportsOnFileMove.enabled": "never",
-    "typescriptHero.codeOutline.enabled": false,
-    "window.zoomLevel": 0,
-    "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Gloom",
-    "workbench.editor.enablePreview": true,
-    "workbench.iconTheme": "vs-seti",
-    "workbench.panel.defaultLocation": "right",
-    "workbench.startupEditor": "none",
-    "workbench.editor.showTabs": true,
-    "editor.rulers": [
-        80
-    ],
-    "projectManager.git.baseFolders": [
-        "$home/development",
-        "$home/spike",
-        "$home/lab"
-    ],
-    "explorer.autoReveal": false,
-    "typescript.preferences.quoteStyle": "single",
-    "typescript.validate.enable": true,
-    "javascript.validate.enable": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.snippetSuggestions": "top",
-    "flow.useNPMPackagedFlow": true,
-    "launch": {
-        "version": "0.2.0",
-        "configurations": [
-            {
-                "type": "chrome",
-                "request": "launch",
-                "name": "Launch Chrome against localhost",
-                "url": "http://localhost:8080",
-                "webRoot": "${workspaceFolder}"
-            },
-            {
-                "type": "node",
-                "request": "launch",
-                "name": "Jest All",
-                "program": "${workspaceFolder}/node_modules/.bin/jest",
-                "args": [
-                    "--runInBand"
-                ],
-                "console": "integratedTerminal",
-                "internalConsoleOptions": "neverOpen",
-                "disableOptimisticBPs": true,
-                "windows": {
-                    "program": "${workspaceFolder}/node_modules/jest/bin/jest"
-                }
-            },
-            {
-                "type": "node",
-                "request": "launch",
-                "name": "Jest Current File",
-                "program": "${workspaceFolder}/node_modules/.bin/jest",
-                "args": [
-                    "${relativeFile}",
-                    "--config",
-                    "jest.config.js"
-                ],
-                "console": "integratedTerminal",
-                "internalConsoleOptions": "neverOpen",
-                "disableOptimisticBPs": true,
-                "windows": {
-                    "program": "${workspaceFolder}/node_modules/jest/bin/jest"
-                }
-            }
-        ],
-        "compounds": []
-    },
-    "eslint.validate": [
-        {
-            "language": "typescript",
-            "autoFix": true
-        },
-        {
-            "language": "typescriptreact",
-            "autoFix": true
+  "atomKeymap.promptV3Features": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "all",
+  "explorer.openEditors.visible": 0,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "workbench.editor.enablePreview": true,
+  "workbench.panel.defaultLocation": "right",
+  "workbench.startupEditor": "none",
+  "workbench.editor.showTabs": true,
+  "editor.rulers": [80],
+  "explorer.autoReveal": false,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.validate.enable": true,
+  "javascript.validate.enable": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.snippetSuggestions": "top",
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "Launch Chrome against localhost",
+        "url": "http://localhost:8080",
+        "webRoot": "${workspaceFolder}"
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Jest All",
+        "program": "${workspaceFolder}/node_modules/.bin/jest",
+        "args": ["--runInBand"],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "disableOptimisticBPs": true,
+        "windows": {
+          "program": "${workspaceFolder}/node_modules/jest/bin/jest"
         }
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Jest Current File",
+        "program": "${workspaceFolder}/node_modules/.bin/jest",
+        "args": ["${relativeFile}", "--config", "jest.config.js"],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "disableOptimisticBPs": true,
+        "windows": {
+          "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+        }
+      }
     ],
-    "scm.diffDecorations": "gutter",
-    "terminal.external.osxExec": "terminal.app",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "breadcrumbs.enabled": false,
-    "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.enabled": false,
-    "gitlens.blame.ignoreWhitespace": true,
-    "cSpell.allowCompoundWords": true,
-    "cSpell.userWords": [
-        "unmount",
-        "unmounting",
-        "jira",
-        "confluence",
-        "atlassian"
-    ],
-    "editor.folding": false,
-    "editor.tabSize": 2
+    "compounds": []
+  },
+  "eslint.validate": [
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "scm.diffDecorations": "gutter",
+  "terminal.external.osxExec": "terminal.app",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.userWords": [
+    "Figma",
+    "atlassian",
+    "confluence",
+    "debouncing",
+    "jira",
+    "unmount",
+    "unmounting"
+  ],
+  "editor.folding": false,
+  "editor.tabSize": 2,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "search.followSymlinks": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.colorTheme": "Gloom",
+  "timeline.excludeSources": [],
+  "extensions.ignoreRecommendations": true,
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "graphql",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "python",
+    "pug",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml",
+    "mdx"
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "cSpell.enabled": true,
+  "breadcrumbs.enabled": false,
+  "editor.guides.indentation": false,
+  "stylelint.packageManager": "yarn",
+  "stylelint.reportNeedlessDisables": true,
+  "stylelint.snippet": ["css", "less", "postcss", "scss"],
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "workbench.activityBar.visible": false,
+  "window.zoomLevel": 2
 }
