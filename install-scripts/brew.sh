@@ -18,6 +18,7 @@ brew install tig
 brew install tree
 brew install vim
 brew install yarn
+brew install pure
 
 echo "Brew Cask"
 
