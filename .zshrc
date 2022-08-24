@@ -13,13 +13,8 @@ export ZSH="/Users/$USERNAME/.oh-my-zsh"
 # Base
 # ZSH_THEME="ddc-prompt"
 
-# Spaceship
-# ZSH_THEME="spaceship"
-
-# Pure propt + theme
-ZSH_THEME="" # left empty to tell oh-my-zsh not to load a theme
-autoload -U promptinit; promptinit
-prompt pure
+# ZSH theme
+ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
