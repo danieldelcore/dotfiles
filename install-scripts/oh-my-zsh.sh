@@ -6,6 +6,10 @@ echo "installing oh-my-zsh..."
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+echo "installing Snazzy colors into Iterm"
+
+open ~/.dotfiles/iterm/Snazzy.itermcolors
+
 echo "installing base theme (DDC)..."
 
 ln -s "~/.dotfiles/oh-my-zsh/ddc-theme.zsh-theme" "$ZSH_CUSTOM/themes/ddc-prompt/ddc-theme.zsh-theme"
