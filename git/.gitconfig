@@ -14,4 +14,8 @@
 	required = true
 	clean = git-lfs clean -- %f
 [rebase]
-    autosquash=true
+	autosquash=true
+[fetch]
+	prune = true
+	pruneTags = true
+	
