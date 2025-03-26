@@ -35,8 +35,6 @@ To import the config, use the following command:
 - Click "Import All Settings and Data" 
 - Navigate to this file `~/.dotfiles/iterm/Iterm2 State.itermexport`
 
-## Arc
-
 ## ZSH Themes 🍱
 
 This repo installs three themes by default. Theme configuration is available in `.zshrc`.
