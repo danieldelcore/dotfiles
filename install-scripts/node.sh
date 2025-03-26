@@ -2,8 +2,10 @@
 
 echo "Node ⬢"
 
-nvm install 10
-nvm alias default 10
+nvm install 18
+nvm install 20
+nvm install 20.17.0
+nvm alias default 20
 
 echo "Installing latest npm"
 
