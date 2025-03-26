@@ -13,8 +13,4 @@ ln -sf ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User
 ln -sf ~/.dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 ln -sf ~/.dotfiles/vscode/snippets/* ~/Library/Application\ Support/Code/User/snippets
 
-echo "Arc 🎨"
-
-ln -sf ~/.dotfiles/arc/StorableSidebar.json ~/Library/Application\ Support/Arc/StorableSidebar.json
-
 echo "Symlinks finished 🔀"
