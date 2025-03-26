@@ -38,14 +38,14 @@ brew install --cask 1password
 brew install --cask dropbox
 brew install --cask imagealpha
 brew install --cask imageoptim
-brew install --cask insomnia
 brew install --cask kap
 brew install --cask figma
 brew install --cask slack
 brew install --cask vlc
 brew install --cask notion
 brew install --cask spotify
-
+brew install --cask raycast
+brew install --cask arc
 
 # Cleanup
 brew cleanup
