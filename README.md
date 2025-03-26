@@ -31,11 +31,9 @@ To import the config, use the following command:
 
 ## Iterm2
 
-Import the profile by opening iterm2 => settings => profiles
-
-Click the `+` in the bottom left corner and import the file at:
-
-`~/.dotfiles/iterm/ItermProfileDefault.json`
+- Import the profile by opening iterm2 => settings => general => settings (tab)
+- Click "Import All Settings and Data" 
+- Navigate to this file `~/.dotfiles/iterm/Iterm2 State.itermexport`
 
 ## Arc
 
