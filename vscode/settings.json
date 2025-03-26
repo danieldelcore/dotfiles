@@ -71,7 +71,6 @@
   ],
   "scm.diffDecorations": "gutter",
   "terminal.external.osxExec": "terminal.app",
-  "diffEditor.ignoreTrimWhitespace": false,
   "cSpell.allowCompoundWords": true,
   "cSpell.userWords": [
     "Figma",
@@ -99,8 +98,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "search.followSymlinks": false,
   "workbench.tree.renderIndentGuides": "none",
-  "workbench.colorTheme": "Gloom",
-  "timeline.excludeSources": [],
   "extensions.ignoreRecommendations": true,
   "cSpell.enabledLanguageIds": [
     "asciidoc",
@@ -140,14 +137,40 @@
   ],
   "security.workspace.trust.untrustedFiles": "open",
   "cSpell.enabled": true,
-  "breadcrumbs.enabled": false,
   "editor.guides.indentation": false,
   "stylelint.packageManager": "yarn",
   "stylelint.reportNeedlessDisables": true,
   "stylelint.snippet": ["css", "less", "postcss", "scss"],
   "stylelint.validate": ["css", "less", "postcss", "scss"],
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
   "workbench.activityBar.visible": false,
-  "window.zoomLevel": 2
+  "workbench.colorTheme": "Gloom",
+  "editor.formatOnPaste": true,
+  "window.confirmBeforeClose": "always",
+  "json.schemas": [
+    {
+      "fileMatch": ["package.json"],
+      "url": "./schemas/artifacts/packageJson.generated.schema.json"
+    },
+    {
+      "fileMatch": ["teams.json"],
+      "url": "./schemas/artifacts/teams.generated.schema.json"
+    }
+  ],
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "breadcrumbs.enabled": false,
+  "terminal.integrated.env.osx": {},
+  "editor.formatOnSave": true,
+  "peacock.affectActivityBar": false,
+  "peacock.affectSashHover": false,
+  "peacock.affectTitleBar": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "window.zoomLevel": 1
 }

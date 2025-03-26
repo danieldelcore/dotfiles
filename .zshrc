@@ -63,10 +63,19 @@ alias gitalias="cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep '^alias'"
 alias dev="cd ~/Development"
 alias lab="cd ~/Lab"
 
-alias todo="open /Users/${USERNAME}/Dropbox/1_docs/0_TODO.md"
-alias typora="open -a Typora"
-alias go-hyper="cd ~/.hyper_plugins/local/"
 alias github="git ls-remote --get-url | sed 's/:/\//' | sed 's/git@/https:\/\//' | xargs open"
+
+# Git
+alias gfrom="git fetch origin master && git rebase origin/master"
+
+# Work
+alias af="cd ~/Development/atlassian/atlassian-frontend-monorepo"
+alias afp="cd ~/Development/atlassian/atlassian-frontend-monorepo/platform && nvm use"
+alias afj="cd ~/Development/atlassian/atlassian-frontend-monorepo/jira && nvm use"
+alias afc="cd ~/Development/atlassian/atlassian-frontend-monorepo/confluence && nvm use"
+alias jfe="cd ~/Development/atlassian/atlassian-frontend-monorepo/jira && nvm use"
+
+
 
 # Sets vim version
 export EDITOR=`which vim`
@@ -99,24 +108,17 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Calls nvm use automatically in a directory with a .nvmrc file
-# autoload -U add-zsh-hook
-# load-nvmrc() {
-#   local node_version="$(nvm version)"
-#   local nvmrc_path="$(nvm_find_nvmrc)"
-#
-#   if [ -n "$nvmrc_path" ]; then
-#     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-#
-#     if [ "$nvmrc_node_version" = "N/A" ]; then
-#       nvm install
-#     elif [ "$nvmrc_node_version" != "$node_version" ]; then
-#       nvm use
-#     fi
-#   elif [ "$node_version" != "$(nvm version default)" ]; then
-#     echo "Reverting to nvm default version"
-#     nvm use default
-#   fi
-# }
-# add-zsh-hook chpwd load-nvmrc
-# load-nvmrc
+# bun completions
+[ -s "/Users/ddelcore/.bun/_bun" ] && source "/Users/ddelcore/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+source ~/.afm-git-configrc
+
+export PATH="/Users/ddelcore/.local/bin:$PATH"
+
+export PATH="/Users/ddelcore/.orbit/bin:$PATH"
+
+export PATH="/Users/ddelcore/Development/atlassian/atlassian-frontend-monorepo/afm-tools/path:$PATH"

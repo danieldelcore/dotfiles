@@ -11,6 +11,7 @@ GIT: Recommit remote branch ## printf 'git commit --amend --no-edit && git push 
 GIT: Clean merged branches ## printf 'g branch --merged | grep -v master | xargs -pr git branch -d'
 GIT: Pull all repos in current folder ## printf 'find . -maxdepth 2 -name .git -type d | xargs -n1 -P 10 -I%% git --git-dir=%% --work-tree=%%/.. pull'
 GIT: Set upstream to current branch ## printf 'git rev-parse --abbrev-ref HEAD | xargs -L1 -I{} git branch --set-upstream-to="origin/{}"'
+NPM: Get global npm install location ## printf 'npm list -g'
 GITHUB: Open Repo ## cat ~/.repos | fzf -m | gxargs -i{} open 'https://github.com/{}'
 GITHUB: Update repo list ## printf 'repos > ~/.repos'
 PYTHON: Source Python Virtual Environment ## printf 'source virtualenv/bin/activate'
