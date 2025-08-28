@@ -13,6 +13,7 @@ brew install mcrypt
 brew install mongodb
 brew install mysql
 brew install nvm
+brew install fnm
 brew install rename
 brew install tig
 brew install tree

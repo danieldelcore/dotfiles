@@ -47,6 +47,10 @@ __command_palette () {
 zle -N '__command_palette'
 bindkey '^ ' __command_palette
 
+# node version manager
+eval "$(fnm env --use-on-cd --shell zsh)"
+alias nvm="fnm"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
