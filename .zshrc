@@ -51,6 +51,13 @@ bindkey '^ ' __command_palette
 eval "$(fnm env --use-on-cd --shell zsh)"
 alias nvm="fnm"
 
+# control+left arrow to go back one word in iTerm2
+# https://superuser.com/questions/357355/how-can-i-get-controlleft-arrow-to-go-back-one-word-in-iterm2
+
+bindkey -e
+bindkey '\e\e[C' forward-word
+bindkey '\e\e[D' backward-word
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
